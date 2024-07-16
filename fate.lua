@@ -3344,5 +3344,5 @@ end)()
     }
     local info_text = table.concat(info_text_table, "\n")
 
-THIS IS NOT FINISHED U CAN NOT INJECT
+Hi! THIS IS NOT FINISHED U CAN NOT INJECT. This Is Fate An Upcoming Da Hood Script :)
 30% DONE
