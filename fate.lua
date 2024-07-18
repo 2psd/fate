@@ -4,7 +4,8 @@ local SYC = {
     }
 }
 
-
+-- check if there is no global variable SYC, and if there is none, it will set it to the table above.
+-- erm its basically prefetch ifykyk
 if not getgenv().SYC then
     getgenv().SYC = SYC
 end
@@ -41,6 +42,7 @@ getgenv().inputManager = game:GetService("VirtualInputManager")
 local LocalPlayer = playerService.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 
+-- localization of lua libraries. this reduces the need to repeatedly look up these global libraries.
 
 local MathHuge, MathAbs, MathAcos, MathAsin, MathAtan, MathAtan2, MathCeil, MathCos, MathCosh, MathDeg, MathExp, MathFloor, MathFmod, MathFrexp, MathLdexp, MathLog, MathLog10, MathMax, MathMin, MathModf, MathPi, MathPow, MathRad, MathRandom, MathRandomseed, MathSin, MathSinh, MathSqrt, MathTan, MathTanh = math.huge, math.abs, math.acos, math.asin, math.atan, math.atan2, math.ceil, math.cos, math.cosh, math.deg, math.exp, math.floor, math.fmod, math.frexp, math.ldexp, math.log, math.log10, math.max, math.min, math.modf, math.pi, math.pow, math.rad, math.random, math.randomseed, math.sin, math.sinh, math.sqrt, math.tan, math.tanh
 local TableConcat, TableInsert, TablePack, TableRemove, TableSort, TableUnpack, TableClear, TableFind = table.concat, table.insert, table.pack, table.remove, table.sort, table.unpack, table.clear, table.find
@@ -54,9 +56,9 @@ local TaskDelay, TaskSpawn, TaskWait = task.delay, task.spawn, task.wait
 local RaycastParamsNew = RaycastParams.new
 local DrawingNew = Drawing.new
 
-
-local ModuleHandler = (function()
- 
+-- importing of files, this is bundled with a bundler.
+local ModuleHandler = (function() -- src/Lua/Modules/ModuleHandler.lua
+    -- similar to lua require, but it is for a certain table. Such as SYC.Modules
     
     local ModuleHandler = {}
     
@@ -342,7 +344,7 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
         UI["a"]["BackgroundTransparency"] = 1
         UI["a"]["Size"] = UDim2New(0, 452, 0, 19)
         UI["a"]["BorderColor3"] = Color3FromRGB(0, 0, 0)
-        UI["a"]["Text"] = [[Made By 2psd ]]
+        UI["a"]["Text"] = [[powered by astro.space]]
         UI["a"]["Name"] = [[CreditTitle]]
         UI["a"]["Position"] = UDim2New(0, 96, 0, 428)
     
@@ -665,8 +667,1197 @@ local UserInterface = (function() -- src/Lua/Interface/Interface.Lua
                             local LeftLeg_2 = InstanceNew("TextButton")
                             local Torso_3 = InstanceNew("TextButton")
                             local HumanoidRootPart_2 = InstanceNew("TextButton")
-[]
-Fate Is A Upcoming Da hood Script And It is NOT done like NOWHERE close to being done
-10%
-
-                                                
+                            
+                            BoneSelectorHolder.Name = "BoneSelectorHolder"
+                            BoneSelectorHolder.Parent = SectionColumnComponents
+                            BoneSelectorHolder.Size = UDim2.new(1, 0, 0, 316)
+                            BoneSelectorHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+                            BoneSelectorHolder.Position = UDim2.new(0, 0, -1.17375305e-06, 0)
+                            BoneSelectorHolder.BorderSizePixel = 0
+                            BoneSelectorHolder.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+                            
+                            BSHStroke.Name = "BSHStroke"
+                            BSHStroke.Parent = BoneSelectorHolder
+                            BSHStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                            BSHStroke.Color = Color3.fromRGB(36, 36, 36)
+                            
+                            BSHCorner.Name = "BSHCorner"
+                            BSHCorner.Parent = BoneSelectorHolder
+                            
+                            R15.Name = "R15"
+                            R15.Parent = BoneSelectorHolder
+                            R15.Size = UDim2.new(0, 217, 0, 308)
+                            R15.Visible = true
+                            R15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+                            R15.BackgroundTransparency = 1
+                            R15.Position = UDim2.new(0.0262008738, 0, 0.0187500007, 0)
+                            R15.BorderSizePixel = 0
+                            R15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            
+                            Head.Name = "Head"
+                            Head.Parent = R15
+                            Head.Size = UDim2.new(0, 60, 0, 68)
+                            Head.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            Head.Position = UDim2.new(0.358999997, 0, 0.0579999983, 0)
+                            Head.BorderSizePixel = 2
+                            Head.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            Head.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            Head.Text = ""
+                            Head.TextSize = 14
+                            Head.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            HumanoidRootPart.Name = "HumanoidRootPart"
+                            HumanoidRootPart.Parent = R15
+                            HumanoidRootPart.ZIndex = 2
+                            HumanoidRootPart.Size = UDim2.new(0, 22, 0, 25)
+                            HumanoidRootPart.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            HumanoidRootPart.Position = UDim2.new(0.446557671, 0, 0.402155876, 0)
+                            HumanoidRootPart.BorderSizePixel = 2
+                            HumanoidRootPart.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            HumanoidRootPart.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            HumanoidRootPart.Text = ""
+                            HumanoidRootPart.TextSize = 14
+                            HumanoidRootPart.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftHand.Name = "LeftHand"
+                            LeftHand.Parent = R15
+                            LeftHand.Size = UDim2.new(0, 53, 0, 20)
+                            LeftHand.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftHand.Position = UDim2.new(0.0778940767, 0, 0.548259795, 0)
+                            LeftHand.BorderSizePixel = 2
+                            LeftHand.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftHand.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftHand.Text = ""
+                            LeftHand.TextSize = 14
+                            LeftHand.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftLowerArm.Name = "LeftLowerArm"
+                            LeftLowerArm.Parent = R15
+                            LeftLowerArm.Size = UDim2.new(0, 53, 0, 44)
+                            LeftLowerArm.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftLowerArm.Position = UDim2.new(0.0778940767, 0, 0.405238956, 0)
+                            LeftLowerArm.BorderSizePixel = 2
+                            LeftLowerArm.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftLowerArm.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftLowerArm.Text = ""
+                            LeftLowerArm.TextSize = 14
+                            LeftLowerArm.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LowerTorso.Name = "LowerTorso"
+                            LowerTorso.Parent = R15
+                            LowerTorso.Size = UDim2.new(0, 76, 0, 20)
+                            LowerTorso.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LowerTorso.Position = UDim2.new(0.32213372, 0, 0.54809612, 0)
+                            LowerTorso.BorderSizePixel = 2
+                            LowerTorso.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LowerTorso.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LowerTorso.Text = ""
+                            LowerTorso.TextSize = 14
+                            LowerTorso.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftUpperArm.Name = "LeftUpperArm"
+                            LeftUpperArm.Parent = R15
+                            LeftUpperArm.Size = UDim2.new(0, 53, 0, 38)
+                            LeftUpperArm.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftUpperArm.Position = UDim2.new(0.0778940767, 0, 0.278615594, 0)
+                            LeftUpperArm.BorderSizePixel = 2
+                            LeftUpperArm.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftUpperArm.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftUpperArm.Text = ""
+                            LeftUpperArm.TextSize = 14
+                            LeftUpperArm.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightHand.Name = "RightHand"
+                            RightHand.Parent = R15
+                            RightHand.Size = UDim2.new(0, 49, 0, 19)
+                            RightHand.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightHand.Position = UDim2.new(0.672364116, 0, 0.548259795, 0)
+                            RightHand.BorderSizePixel = 2
+                            RightHand.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightHand.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightHand.Text = ""
+                            RightHand.TextSize = 14
+                            RightHand.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightUpperArm.Name = "RightUpperArm"
+                            RightUpperArm.Parent = R15
+                            RightUpperArm.Size = UDim2.new(0, 53, 0, 38)
+                            RightUpperArm.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightUpperArm.Position = UDim2.new(0.672364116, 0, 0.278615594, 0)
+                            RightUpperArm.BorderSizePixel = 2
+                            RightUpperArm.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightUpperArm.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightUpperArm.Text = ""
+                            RightUpperArm.TextSize = 14
+                            RightUpperArm.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightLowerArm.Name = "RightLowerArm"
+                            RightLowerArm.Parent = R15
+                            RightLowerArm.Size = UDim2.new(0, 53, 0, 44)
+                            RightLowerArm.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightLowerArm.Position = UDim2.new(0.672364116, 0, 0.405238956, 0)
+                            RightLowerArm.BorderSizePixel = 2
+                            RightLowerArm.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightLowerArm.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightLowerArm.Text = ""
+                            RightLowerArm.TextSize = 14
+                            RightLowerArm.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            UpperTorso.Name = "UpperTorso"
+                            UpperTorso.Parent = R15
+                            UpperTorso.Size = UDim2.new(0, 76, 0, 82)
+                            UpperTorso.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            UpperTorso.Position = UDim2.new(0.32213372, 0, 0.279000014, 0)
+                            UpperTorso.BorderSizePixel = 2
+                            UpperTorso.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            UpperTorso.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            UpperTorso.Text = ""
+                            UpperTorso.TextSize = 14
+                            UpperTorso.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftUpperLeg.Name = "LeftUpperLeg"
+                            LeftUpperLeg.Parent = R15
+                            LeftUpperLeg.Size = UDim2.new(0, 38, 0, 62)
+                            LeftUpperLeg.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftUpperLeg.Position = UDim2.new(0.32213372, 0, 0.613031149, 0)
+                            LeftUpperLeg.BorderSizePixel = 2
+                            LeftUpperLeg.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftUpperLeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftUpperLeg.Text = ""
+                            LeftUpperLeg.TextSize = 14
+                            LeftUpperLeg.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftLowerLeg.Name = "LeftLowerLeg"
+                            LeftLowerLeg.Parent = R15
+                            LeftLowerLeg.Size = UDim2.new(0, 38, 0, 32)
+                            LeftLowerLeg.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftLowerLeg.Position = UDim2.new(0.32213372, 0, 0.814329863, 0)
+                            LeftLowerLeg.BorderSizePixel = 2
+                            LeftLowerLeg.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftLowerLeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftLowerLeg.Text = ""
+                            LeftLowerLeg.TextSize = 14
+                            LeftLowerLeg.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            LeftFoot.Name = "LeftFoot"
+                            LeftFoot.Parent = R15
+                            LeftFoot.Size = UDim2.new(0, 38, 0, 9)
+                            LeftFoot.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftFoot.Position = UDim2.new(0.32213372, 0, 0.918225944, 0)
+                            LeftFoot.BorderSizePixel = 2
+                            LeftFoot.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftFoot.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftFoot.Text = ""
+                            LeftFoot.TextSize = 14
+                            LeftFoot.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightFoot.Name = "RightFoot"
+                            RightFoot.Parent = R15
+                            RightFoot.Size = UDim2.new(0, 38, 0, 9)
+                            RightFoot.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightFoot.Position = UDim2.new(0.497248918, 0, 0.918225944, 0)
+                            RightFoot.BorderSizePixel = 2
+                            RightFoot.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightFoot.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightFoot.Text = ""
+                            RightFoot.TextSize = 14
+                            RightFoot.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightUpperLeg.Name = "RightUpperLeg"
+                            RightUpperLeg.Parent = R15
+                            RightUpperLeg.Size = UDim2.new(0, 38, 0, 62)
+                            RightUpperLeg.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightUpperLeg.Position = UDim2.new(0.497248918, 0, 0.613031149, 0)
+                            RightUpperLeg.BorderSizePixel = 2
+                            RightUpperLeg.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightUpperLeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightUpperLeg.Text = ""
+                            RightUpperLeg.TextSize = 14
+                            RightUpperLeg.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            RightLowerLeg.Name = "RightLowerLeg"
+                            RightLowerLeg.Parent = R15
+                            RightLowerLeg.Size = UDim2.new(0, 38, 0, 32)
+                            RightLowerLeg.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightLowerLeg.Position = UDim2.new(0.497248918, 0, 0.814329863, 0)
+                            RightLowerLeg.BorderSizePixel = 2
+                            RightLowerLeg.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightLowerLeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightLowerLeg.Text = ""
+                            RightLowerLeg.TextSize = 14
+                            RightLowerLeg.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            R6.Name = "R6"
+                            R6.Parent = BoneSelectorHolder
+                            R6.Size = UDim2.new(0, 217, 0, 308)
+                            R6.Visible = false
+                            R6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+                            R6.BackgroundTransparency = 1
+                            R6.Position = UDim2.new(0.0262008738, 0, 0.0187500007, 0)
+                            R6.BorderSizePixel = 0
+                            R6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            
+                            Head_2.Name = "Head"
+                            Head_2.Parent = R6
+                            Head_2.Size = UDim2.new(0, 76, 0, 68)
+                            Head_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            Head_2.Position = UDim2.new(0.322580636, 0, 0.058441557, 0)
+                            Head_2.BorderSizePixel = 2
+                            Head_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            Head_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            Head_2.Text = ""
+                            Head_2.TextSize = 14
+                            Head_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            LeftArm_2.Name = "Left Arm"
+                            LeftArm_2.Parent = R6
+                            LeftArm_2.Size = UDim2.new(0, 53, 0, 103)
+                            LeftArm_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftArm_2.Position = UDim2.new(0.0783410147, 0, 0.27922079, 0)
+                            LeftArm_2.BorderSizePixel = 2
+                            LeftArm_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftArm_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftArm_2.Text = ""
+                            LeftArm_2.TextSize = 14
+                            LeftArm_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            RightArm_2.Name = "Right Arm"
+                            RightArm_2.Parent = R6
+                            RightArm_2.Size = UDim2.new(0, 53, 0, 103)
+                            RightArm_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightArm_2.Position = UDim2.new(0.672811031, 0, 0.27922079, 0)
+                            RightArm_2.BorderSizePixel = 2
+                            RightArm_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightArm_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightArm_2.Text = ""
+                            RightArm_2.TextSize = 14
+                            RightArm_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            RightLeg_2.Name = "Right Leg"
+                            RightLeg_2.Parent = R6
+                            RightLeg_2.Size = UDim2.new(0, 38, 0, 103)
+                            RightLeg_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            RightLeg_2.Position = UDim2.new(0.497695863, 0, 0.613636374, 0)
+                            RightLeg_2.BorderSizePixel = 2
+                            RightLeg_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            RightLeg_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            RightLeg_2.Text = ""
+                            RightLeg_2.TextSize = 14
+                            RightLeg_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            LeftLeg_2.Name = "Left Leg"
+                            LeftLeg_2.Parent = R6
+                            LeftLeg_2.Size = UDim2.new(0, 38, 0, 103)
+                            LeftLeg_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            LeftLeg_2.Position = UDim2.new(0.322580636, 0, 0.613636374, 0)
+                            LeftLeg_2.BorderSizePixel = 2
+                            LeftLeg_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            LeftLeg_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            LeftLeg_2.Text = ""
+                            LeftLeg_2.TextSize = 14
+                            LeftLeg_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            Torso_3.Name = "Torso"
+                            Torso_3.Parent = R6
+                            Torso_3.Size = UDim2.new(0, 76, 0, 103)
+                            Torso_3.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            Torso_3.Position = UDim2.new(0.322580636, 0, 0.27922079, 0)
+                            Torso_3.BorderSizePixel = 2
+                            Torso_3.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            Torso_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            Torso_3.Text = ""
+                            Torso_3.TextSize = 14
+                            Torso_3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            HumanoidRootPart_2.Name = "HumanoidRootPart"
+                            HumanoidRootPart_2.Parent = R6
+                            HumanoidRootPart_2.Size = UDim2.new(0, 31, 0, 30)
+                            HumanoidRootPart_2.BorderColor3 = Color3.fromRGB(36, 36, 36)
+                            HumanoidRootPart_2.Position = UDim2.new(0.42396313, 0, 0.373376638, 0)
+                            HumanoidRootPart_2.BorderSizePixel = 2
+                            HumanoidRootPart_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+                            HumanoidRootPart_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+                            HumanoidRootPart_2.Text = ""
+                            HumanoidRootPart_2.TextSize = 14
+                            HumanoidRootPart_2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                        
+                            local function R15_function()
+                                for _, bodypart in pairs(R15:GetChildren()) do
+                                    bodypart.AutoButtonColor = false
+                        
+                                    local name = bodypart.Name
+                                    --if string.find(name, "frame") then continue end
+                        
+                                    local self_conn = nil
+                                    local function ButtonClick()
+                                        tweenService:Create(bodypart, TweenInfo.new(0.2), { BackgroundColor3 = theme.accent }):Play()
+                                        BoneSelector["FValues"][name].Selected = true
+                        
+                                        if not self_conn then
+                                            self_conn = theme_event.Event:Connect(function ()
+                                                if BoneSelector["FValues"][name].Selected then
+                                                    bodypart.BackgroundColor3 = theme.accent
+                                                end
+                                            end)
+                                        end
+                                    end
+                        
+                                    local function ButtonUnClick()
+                                        tweenService:Create(bodypart, TweenInfo.new(0.2), { BackgroundColor3 = Color3FromRGB(27, 27, 27) }):Play()
+                                        BoneSelector["FValues"][name].Selected = false
+                        
+                                        if self_conn then
+                                            self_conn:Disconnect(); self_conn = nil
+                                        end
+                                    end
+                        
+                                    bodypart.MouseButton1Click:Connect(function ()
+                                        BoneSelectorOptions:Set(name)
+                                    end)
+                        
+                                    BoneSelector["FValues"][name] = {
+                                        Click = ButtonClick,
+                                        UnClick = ButtonUnClick,
+                                        Selected = false,
+                                    }
+                                end
+                            end
+                        
+                            local function R6_FUNCTION()
+                                for _, bodypart in pairs(R6:GetChildren()) do
+                                    local name = bodypart.Name
+                        
+                                    local self_conn = nil
+                                    local function ButtonClick()
+                                        bodypart.BackgroundColor3 = theme.accent
+                                        BoneSelector["FValues"][name].Selected = true
+                        
+                                        if not self_conn then
+                                            self_conn = theme_event.Event:Connect(function ()
+                                                if BoneSelector["FValues"][name].Selected then
+                                                    bodypart.BackgroundColor3 = theme.accent
+                                                end
+                                            end)
+                                        end
+                                    end
+                        
+                                    local function ButtonUnClick()
+                                        bodypart.BackgroundColor3 = Color3FromRGB(27, 27, 27)
+                                        BoneSelector["FValues"][name].Selected = false
+                        
+                                        if self_conn then
+                                            self_conn:Disconnect(); self_conn = nil
+                                        end
+                                    end
+                        
+                                    bodypart.MouseButton1Click:Connect(function ()
+                                        BoneSelectorOptions:Set(name)
+                                    end)
+                        
+                                    BoneSelector["FValues"][name] = {
+                                        Click = ButtonClick,
+                                        UnClick = ButtonUnClick,
+                                        Selected = false,
+                                    }
+                        
+                        
+                                end
+                            end
+                        
+                            R15_function()
+                        
+                            function BoneSelectorOptions:Update()
+                                for _, v in pairs(BoneSelector.FValues) do
+                                    if BoneSelector.FValue == _ then
+                                        v.Click()
+                                    else
+                                        v.UnClick()
+                                    end
+                                end
+                        
+                                return BoneSelector
+                            end
+                        
+                            function BoneSelectorOptions:Set(value)
+                                if BoneSelectorOptions.Multi then
+                                    if type(value) == "table" then
+                                        BoneSelectorOptions:Refresh()
+                            
+                                        for _,v in pairs(value) do
+                                            if not table.find(BoneSelector.FValue, _) then
+                                                BoneSelectorOptions:Set(v)
+                                            end
+                                        end
+                            
+                                        local RemovedButtons = {}
+                            
+                                        for _,v in pairs(BoneSelector.FValue) do
+                                            if not table.find(value, _) then
+                                                RemovedButtons[#RemovedButtons + 1] = v
+                                            end
+                                        end
+                            
+                                        pcall(BoneSelectorOptions.Callback, BoneSelector.FValue)
+                                        UserInterface.Flags[BoneSelectorOptions.Flag] = BoneSelector.FValue
+                                        UserInterface.Flags[BoneSelectorOptions.Flag .. "f"] = { [1] = function(value)  end, [2] = function(value) BoneSelectorOptions:Set(value) end }
+                            
+                                        return
+                                    end
+                            
+                                    local Index = table.find(BoneSelector.FValue, value)
+                            
+                                    if Index then
+                                        table.remove(BoneSelector.FValue, Index)
+                            
+                                        BoneSelector.FValues[value].UnClick()
+                            
+                                        pcall(BoneSelectorOptions.Callback, BoneSelector.FValue)
+                                        UserInterface.Flags[BoneSelectorOptions.Flag] = BoneSelector.FValue
+                                        UserInterface.Flags[BoneSelectorOptions.Flag .. "f"] = { [1] = function() BoneSelectorOptions:Refresh() end, [2] = function(value) BoneSelectorOptions:Set(value) end }
+                                    else
+                                        BoneSelector.FValue[#BoneSelector.FValue + 1] = value
+                            
+                                        BoneSelector.FValues[value].Click()
+                            
+                                        pcall(BoneSelectorOptions.Callback, BoneSelector.FValue)
+                                        UserInterface.Flags[BoneSelectorOptions.Flag] = BoneSelector.FValue
+                                        UserInterface.Flags[BoneSelectorOptions.Flag .. "f"] = { [1] = function() BoneSelectorOptions:Refresh() end, [2] = function(value) BoneSelectorOptions:Set(value) end }
+                                    end
+                                else
+                                    BoneSelector.FValue = value
+                        
+                                    for _, v in pairs(BoneSelector.FValues) do
+                                        v.UnClick()
+                                    end
+                                    BoneSelector["FValues"][BoneSelector.FValue].Click()
+                        
+                                    pcall(BoneSelectorOptions.Callback, BoneSelector.FValue)
+                                    UserInterface.Flags[BoneSelectorOptions.Flag] = BoneSelector.FValue
+                                    UserInterface.Flags[BoneSelectorOptions.Flag .. "f"] = { [1] = function() BoneSelectorOptions:Refresh() end, [2] = function(value) BoneSelectorOptions:Set(value) end }
+                                end 
+                            end
+                        
+                            function BoneSelectorOptions:GetValues()
+                                return BoneSelector.FValue
+                            end
+                        
+                            function BoneSelectorOptions:Refresh()
+                                for i, v in next, BoneSelector.FValues do
+                                    if v.UnClick then
+                                        v.UnClick()
+                                    end
+                                end
+                            end
+                        
+                            function BoneSelectorOptions:SetMulti(bool)
+                                if BoneSelectorOptions.Multi == bool then return end
+                                self:Refresh()
+                                BoneSelectorOptions.Multi = bool
+                                BoneSelector.FValue = bool and {} or ""
+                            end
+                        
+                            UserInterface.ConfigFlags[BoneSelectorOptions.Flag] = function(state) BoneSelectorOptions:Set(state) end
+                            increaseYSize(308)
+                            return BoneSelectorOptions
+                        end
+                    end
+                    do -- src/Lua/Interface/Components/Button.lua
+                        function Options:Button(Configuration)
+                            local ButtonOptions = {
+                                title = Configuration.title or "button",
+                                callback = Configuration.callback or function () end
+                            }
+                            
+                            local Button = InstanceNew("TextButton")
+                            local ButtonCorner = InstanceNew("UICorner")
+                        
+                            Button.Name = "Button"
+                            Button.Parent = SectionColumnComponents
+                            Button.BackgroundColor3 = Color3FromRGB(21, 21, 21)
+                            Button.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            Button.BorderSizePixel = 0
+                            Button.Size = UDim2New(0, 159, 0, 23)
+                            Button.AutoButtonColor = false
+                            Button.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]])
+                            Button.Text = ButtonOptions.title
+                            Button.TextColor3 = Color3FromRGB(255, 255, 255)
+                            Button.TextSize = 14
+                            Button.TextStrokeTransparency = 0
+                            Button.TextWrapped = true
+                        
+                            ButtonCorner.CornerRadius = UDim.new(0, 2)
+                            ButtonCorner.Name = "ButtonCorner"
+                            ButtonCorner.Parent = Button
+                        
+                            local ButtonStroke = InstanceNew("UIStroke", Button)
+                            ButtonStroke["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+                            ButtonStroke["Name"] = [[ButtonStroke]]
+                            ButtonStroke["Color"] = Color3FromRGB(37, 37, 37)
+                            
+                            local Tweens = {
+                                OnClick = function ()
+                                    local ButtonTween, ButtonStrokeTween = 
+                                    tweenService:Create(Button, TweenInfo.new(0), {BackgroundColor3 = Color3FromRGB(36, 36, 36)}),
+                                    tweenService:Create(ButtonStroke, TweenInfo.new(0), {Color = Color3FromRGB(45, 43, 46)})
+                                    ButtonTween:Play();ButtonStrokeTween:Play()
+                                end,
+                                OnHover = function ()
+                                    local ButtonTween, ButtonStrokeTween = 
+                                    tweenService:Create(Button, TweenInfo.new(0), {BackgroundColor3 = Color3FromRGB(28, 28, 28)}),
+                                    tweenService:Create(ButtonStroke, TweenInfo.new(0), {Color = Color3FromRGB(36, 36, 36)})
+                                    ButtonTween:Play();ButtonStrokeTween:Play()
+                                end,
+                                OnMouseLeave = function ()
+                                    local ButtonTween, ButtonStrokeTween = 
+                                    tweenService:Create(Button, TweenInfo.new(0), {BackgroundColor3 = Color3FromRGB(21, 21, 21)}),
+                                    tweenService:Create(ButtonStroke, TweenInfo.new(0), {Color = Color3FromRGB(40, 40, 40)})
+                                    ButtonTween:Play();ButtonStrokeTween:Play()
+                                end
+                            }
+                        
+                            local function OnClick()
+                                Tweens.OnClick()
+                                pcall(ButtonOptions.callback)
+                        
+                                TaskWait(0.1)
+                                Tweens.OnHover()
+                            end
+                        
+                            Button.MouseButton1Click:Connect(OnClick)
+                            Button.MouseEnter:Connect(Tweens.OnHover)
+                            Button.MouseLeave:Connect(Tweens.OnMouseLeave)
+                        
+                            increaseYSize(23)
+                        end
+                    end
+                    do -- src/Lua/Interface/Components/Colorpicker.lua
+                        function Options:Colorpicker(Configuration, ToggleOption)
+                            local ColorpickerOptions = {
+                                Title = Configuration.title or "colorpicker",
+                                Default = Configuration.default or Color3FromRGB(255,255,255),
+                                Transparency = Configuration.transparency or 0,
+                                Callback = Configuration.callback or function() end,
+                                Flag = UserInterface:GetNextFlag()
+                            }
+                        
+                            local Colorpicker = {
+                                TransparencyValue = 0,
+                        		ColorValue = nil,
+                        		HuePosition = 0,
+                                SlidingSat = false,
+                        		SlidingHue = false,
+                        		SlidingAlpha = false,
+                            }
+                        
+                            local ColorpickerHolder = InstanceNew("Frame")
+                            local ColorpickerTitle = InstanceNew("TextLabel")
+                            local ColorpickerButton = InstanceNew("TextButton")
+                            local ColorpickerStatus = InstanceNew("Frame")
+                            local ColorpickerInline = InstanceNew("Frame")
+                            local CPInlineCorner = InstanceNew("UICorner")
+                            local ColorpickerContent = InstanceNew("Frame")
+                            local Accent = InstanceNew("Frame")
+                            local HueBackground = InstanceNew("Frame")
+                            local CPHueGradient = InstanceNew("UIGradient")
+                            local HuePicker = InstanceNew("ImageLabel")
+                            local TextButton = InstanceNew("TextButton")
+                            local SaturationBackground = InstanceNew("Frame")
+                            local SaturationImage = InstanceNew("ImageLabel")
+                            local SaturationPicker = InstanceNew("ImageLabel")
+                            local SaturationButton = InstanceNew("TextButton")
+                            local TransparencyBackground = InstanceNew("Frame")
+                            local TransparencyGradient = InstanceNew("UIGradient")
+                            local TransparencyPicker = InstanceNew("ImageLabel")
+                            local TransparencyButton = InstanceNew("TextButton")
+                        
+                            ColorpickerHolder.Name = tostring(math.random(1000, 16384))
+                            ColorpickerHolder.Parent = ToggleOption == nil and SectionColumnComponents or ToggleOption
+                            ColorpickerHolder.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            ColorpickerHolder.BackgroundTransparency = 1.000
+                            ColorpickerHolder.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerHolder.BorderSizePixel = 0
+                            ColorpickerHolder.Size = UDim2New(0, 229, 0, 13)
+                            
+                            if ToggleOption == nil then
+                                ColorpickerTitle.Name = "ColorpickerTitle"
+                                ColorpickerTitle.Parent = ColorpickerHolder
+                                ColorpickerTitle.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                                ColorpickerTitle.BackgroundTransparency = 1.000
+                                ColorpickerTitle.BorderColor3 = Color3FromRGB(0, 0, 0)
+                                ColorpickerTitle.BorderSizePixel = 0
+                                ColorpickerTitle.Size = UDim2New(0, 216, 0, 13)
+                                ColorpickerTitle.Font = Enum.Font.SourceSans
+                                ColorpickerTitle.Text = ColorpickerOptions.Title
+                                ColorpickerTitle.TextColor3 = Color3FromRGB(255, 255, 255)
+                                ColorpickerTitle.TextSize = 14.000
+                                ColorpickerTitle.TextXAlignment = Enum.TextXAlignment.Left 
+                            end
+                            
+                            ColorpickerButton.Name = "ColorpickerButton"
+                            ColorpickerButton.Parent = ColorpickerHolder
+                            ColorpickerButton.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            ColorpickerButton.BackgroundTransparency = 1.000
+                            ColorpickerButton.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerButton.BorderSizePixel = 0
+                            ColorpickerButton.Position = UDim2New(0.943231463, 0, 0, 0)
+                            ColorpickerButton.Size = UDim2New(0, 13, 0, 13)
+                            ColorpickerButton.Font = Enum.Font.SourceSans
+                            ColorpickerButton.Text = ""
+                            ColorpickerButton.TextColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerButton.TextSize = 14.000
+                            
+                            ColorpickerStatus.Name = "ColorpickerStatus"
+                            ColorpickerStatus.Parent = ColorpickerHolder
+                            ColorpickerStatus.BackgroundColor3 = Color3FromRGB(170, 170, 255)
+                            ColorpickerStatus.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerStatus.BorderSizePixel = 0
+                            ColorpickerStatus.Position = UDim2New(0.943231463, 0, 0, 0)
+                            ColorpickerStatus.Size = UDim2New(0, 13, 0, 13)
+                            
+                            ColorpickerInline.Name = "ColorpickerInline"
+                            ColorpickerInline.Parent = ColorpickerHolder
+                            ColorpickerInline.BackgroundColor3 = Color3FromRGB(170, 170, 255)
+                            ColorpickerInline.BackgroundTransparency = 1.000
+                            ColorpickerInline.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerInline.BorderSizePixel = 0
+                            ColorpickerInline.Position = UDim2New(0.943231463, 0, 0, 0)
+                            ColorpickerInline.Size = UDim2New(0, 13, 0, 13)
+                            ColorpickerInline.Visible = false
+                            ColorpickerInline.ZIndex = 3
+                            
+                            CPInlineCorner.CornerRadius = UDim.new(0, 2)
+                            CPInlineCorner.Name = "CPInlineCorner"
+                            CPInlineCorner.Parent = ColorpickerInline
+                        
+                            local ColorpickerStatusCorner = InstanceNew("UICorner")
+                            ColorpickerStatusCorner.CornerRadius = UDim.new(0, 4)
+                            ColorpickerStatusCorner.Name = "ColorpickerStatusCorner"
+                            ColorpickerStatusCorner.Parent = ColorpickerStatus
+                            
+                            ColorpickerContent.Name = "ColorpickerContent"
+                            ColorpickerContent.Parent = ColorpickerInline
+                            ColorpickerContent.BackgroundColor3 = Color3FromRGB(23, 23, 23)
+                            ColorpickerContent.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            ColorpickerContent.Position = UDim2New(-9.46153831, 0, 0, 0)
+                            ColorpickerContent.Size = UDim2New(0, 136, 0, 139)
+                            ColorpickerContent.ZIndex = 3
+                        
+                            Accent.Name = "Accent"
+                            Accent.Parent = ColorpickerContent
+                            Accent.BackgroundColor3 = Color3FromRGB(168, 157, 159)
+                            Accent.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            Accent.Size = UDim2New(1, 0, 0, 1)
+                            
+                            HueBackground.Name = "HueBackground"
+                            HueBackground.Parent = ColorpickerContent
+                            HueBackground.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            HueBackground.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            HueBackground.BorderSizePixel = 0
+                            HueBackground.Position = UDim2New(0.879000008, 0, 0.0680000037, 0)
+                            HueBackground.Size = UDim2New(0, 9, 0, 106)
+                            
+                            CPHueGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3FromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.17, Color3FromRGB(255, 0, 255)), ColorSequenceKeypoint.new(0.33, Color3FromRGB(0, 0, 255)), ColorSequenceKeypoint.new(0.50, Color3FromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.67, Color3FromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.83, Color3FromRGB(255, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3FromRGB(255, 0, 0))}
+                            CPHueGradient.Rotation = 90
+                            CPHueGradient.Name = "CPHueGradient"
+                            CPHueGradient.Parent = HueBackground
+                            
+                            HuePicker.Name = "HuePicker"
+                            HuePicker.Parent = HueBackground
+                            HuePicker.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            HuePicker.BackgroundTransparency = 1
+                            HuePicker.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            HuePicker.BorderSizePixel = 0
+                            HuePicker.Position = UDim2New(0, -4, 0, -2)
+                            HuePicker.Size = UDim2New(0, 17, 0, 5)
+                            HuePicker.Image = "rbxassetid://13900818694"
+                            
+                            TextButton.Parent = HueBackground
+                            TextButton.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            TextButton.BackgroundTransparency = 1.000
+                            TextButton.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            TextButton.BorderSizePixel = 0
+                            TextButton.Size = UDim2New(1, 0, 1, 0)
+                            TextButton.Font = Enum.Font.SourceSans
+                            TextButton.Text = ""
+                            TextButton.TextColor3 = Color3FromRGB(0, 0, 0)
+                            TextButton.TextSize = 14.000
+                            
+                            SaturationBackground.Name = "SaturationBackground"
+                            SaturationBackground.Parent = ColorpickerContent
+                            SaturationBackground.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            SaturationBackground.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            SaturationBackground.Position = UDim2New(0.0661764741, 0, 0.0676691756, 0)
+                            SaturationBackground.Size = UDim2New(0, 102, 0, 106)
+                            
+                            SaturationImage.Name = "SaturationImage"
+                            SaturationImage.Parent = SaturationBackground
+                            SaturationImage.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            SaturationImage.BackgroundTransparency = 1.000
+                            SaturationImage.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            SaturationImage.Size = UDim2New(1, 0, 1, 0)
+                            SaturationImage.Image = "rbxassetid://13901004307"
+                            
+                            SaturationPicker.Name = "SaturationPicker"
+                            SaturationPicker.Parent = SaturationBackground
+                            SaturationPicker.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            SaturationPicker.BackgroundTransparency = 1.000
+                            SaturationPicker.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            SaturationPicker.Position = UDim2New(0, -1, 0, -1)
+                            SaturationPicker.Size = UDim2New(0, 5, 0, 5)
+                            SaturationPicker.Image = "rbxassetid://13900819741"
+                            
+                            SaturationButton.Name = "SaturationButton"
+                            SaturationButton.Parent = SaturationBackground
+                            SaturationButton.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            SaturationButton.BackgroundTransparency = 1.000
+                            SaturationButton.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            SaturationButton.BorderSizePixel = 0
+                            SaturationButton.Size = UDim2New(1, 0, 1, 0)
+                            SaturationButton.Font = Enum.Font.SourceSans
+                            SaturationButton.Text = ""
+                            SaturationButton.TextColor3 = Color3FromRGB(0, 0, 0)
+                            SaturationButton.TextSize = 14.000
+                            
+                            TransparencyBackground.Name = "TransparencyBackground"
+                            TransparencyBackground.Parent = ColorpickerContent
+                            TransparencyBackground.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            TransparencyBackground.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            TransparencyBackground.BorderSizePixel = 0
+                            TransparencyBackground.Position = UDim2New(0.0441176482, 0, 0.880901992, 0)
+                            TransparencyBackground.Size = UDim2New(0, 123, 0, 6)
+                            
+                            TransparencyGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3FromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.57, Color3FromRGB(150, 150, 150)), ColorSequenceKeypoint.new(1.00, Color3FromRGB(0, 0, 0))}
+                            TransparencyGradient.Name = "TransparencyGradient"
+                            TransparencyGradient.Parent = TransparencyBackground
+                            
+                            TransparencyPicker.Name = "TransparencyPicker"
+                            TransparencyPicker.Parent = TransparencyBackground
+                            TransparencyPicker.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            TransparencyPicker.BackgroundTransparency = 1.000
+                            TransparencyPicker.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            TransparencyPicker.BorderSizePixel = 0
+                            TransparencyPicker.Position = UDim2New(0, -2, 0, -2)
+                            TransparencyPicker.Size = UDim2New(0, 5, 0, 17)
+                            TransparencyPicker.Image = "rbxassetid://14248606745"
+                            
+                            TransparencyButton.Name = "TransparencyButton"
+                            TransparencyButton.Parent = TransparencyBackground
+                            TransparencyButton.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            TransparencyButton.BackgroundTransparency = 1.000
+                            TransparencyButton.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            TransparencyButton.BorderSizePixel = 0
+                            TransparencyButton.Size = UDim2New(1, 0, 1, 0)
+                            TransparencyButton.Font = Enum.Font.SourceSans
+                            TransparencyButton.Text = ""
+                            TransparencyButton.TextColor3 = Color3FromRGB(0, 0, 0)
+                            TransparencyButton.TextSize = 14.000
+                        
+                            for _, object in next, ColorpickerContent:GetDescendants() do
+                                if object:IsA("UIGradient") then continue end
+                        
+                                if object.ZIndex then
+                                    object.ZIndex = 3
+                                end
+                            end
+                        
+                            local Hue, Sat, Val = ColorpickerOptions.Default:ToHSV()
+                        
+                            local contentAnimations = {
+                                Open = function ( self )
+                                    ColorpickerContent.Visible = true
+                                    ColorpickerInline.Visible = true
+                        
+                                    local ContentTween = tweenService:Create(ColorpickerContent, TweenInfo.new(0.15), { BackgroundTransparency = 0,  Position = UDim2New(-10.923, 0,0, 0) })
+                                    ContentTween:Play()
+                                    self:FadeIn()
+                                end,
+                                FadeIn = function ()
+                                    for _, object in pairs( ColorpickerContent:GetDescendants() ) do
+                                        if object:IsA("Frame") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { BackgroundTransparency = 0 }):Play()
+                                        elseif object:IsA("ImageLabel") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { ImageTransparency = 0 }):Play()
+                                        end
+                                    end
+                                end,
+                                FadeOut = function ()
+                                    for _, object in pairs( ColorpickerContent:GetDescendants() ) do
+                                        if object:IsA("Frame") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { BackgroundTransparency = 1 }):Play()
+                                        elseif object:IsA("ImageLabel") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { ImageTransparency = 1 }):Play()
+                                        end
+                                    end
+                                end
+                            }
+                        
+                            -- to those who code, they will understand why I did this.
+                            function contentAnimations:Close()
+                                local ContentTween = tweenService:Create(ColorpickerContent, TweenInfo.new(0.15), { BackgroundTransparency = 1, Position = UDim2New(-9.46153831, 0,0, 0) })
+                                ContentTween:Play()
+                        
+                                contentAnimations:FadeOut()
+                        
+                                TaskWait(0.15)
+                        
+                                ColorpickerContent.Visible = false
+                                ColorpickerInline.Visible = false
+                            end
+                        
+                            local function FromRGBA (r, g, b)
+                                local rgb = Color3FromRGB(r, g, b)
+                            
+                                return rgb
+                            end
+                        
+                            function ColorpickerOptions:Set(color, trans, ignore)
+                                if not ColorpickerOptions.Transparency then
+                                    Colorpicker.TransparencyValue = 1
+                                end
+                        
+                                trans = trans or Colorpicker.TransparencyValue
+                        
+                                if typeof(color) == "table" then
+                                    local OldColor = color
+                        
+                                    color = Color3.fromHex(OldColor[1])
+                                    --trans = OldColor[2]
+                                end
+                        
+                                Hue, Sat, Val = color:ToHSV()
+                        
+                                Colorpicker.ColorValue = color
+                                Colorpicker.TransparencyValue = trans
+                        
+                                SaturationBackground.BackgroundColor3 = Color3.fromHSV(Colorpicker.HuePosition, 1, 1)
+                                
+                                ColorpickerStatus.BackgroundColor3 = color
+                                
+                                if not ignore then
+                                    SaturationPicker.Position = UDim2New(0, math.clamp(Sat * SaturationBackground.AbsoluteSize.X, 0, SaturationBackground.AbsoluteSize.X - 3), 0, math.clamp(SaturationBackground.AbsoluteSize.Y - Val * SaturationBackground.AbsoluteSize.Y, 0, SaturationBackground.AbsoluteSize.Y - 3))
+                                    Colorpicker.HuePosition = Hue
+                                    HuePicker.Position = UDim2New(0, -2, 1 - Hue, -2)
+                                end
+                                pcall(ColorpickerOptions.Callback, FromRGBA(color.R * 255, color.G * 255, color.B * 255), trans)
+                                UserInterface.Flags[ColorpickerOptions.Flag] = FromRGBA(color.R * 255, color.G * 255, color.B * 255)
+                            end
+                            ColorpickerOptions:Set(ColorpickerOptions.Default, ColorpickerOptions.Transparency)
+                            
+                            local function SlideSaturation(input)
+                                local SizeX = math.clamp((input.Position.X - SaturationBackground.AbsolutePosition.X) / SaturationBackground.AbsoluteSize.X, 0, 1)
+                                local SizeY = 1 - math.clamp((input.Position.Y - SaturationBackground.AbsolutePosition.Y) / SaturationBackground.AbsoluteSize.Y, 0, 1)
+                                local PosY = math.clamp(((input.Position.Y - SaturationBackground.AbsolutePosition.Y) / SaturationBackground.AbsoluteSize.Y) * SaturationBackground.AbsoluteSize.Y, 0, SaturationBackground.AbsoluteSize.Y - 3)
+                                local PosX = math.clamp(((input.Position.X - SaturationBackground.AbsolutePosition.X) / SaturationBackground.AbsoluteSize.X) * SaturationBackground.AbsoluteSize.X, 0, SaturationBackground.AbsoluteSize.X - 3)
+                                
+                                SaturationPicker.Position = UDim2New(0, PosX, 0, PosY)
+                                ColorpickerOptions:Set(Color3.fromHSV(Colorpicker.HuePosition, SizeX, SizeY), Colorpicker.TransparencyValue, true)
+                            end
+                        
+                            SaturationButton.MouseButton1Down:Connect(function (input)
+                                Colorpicker.SlidingSat = true
+                        
+                                SlideSaturation({ Position = game.UserInputService:GetMouseLocation() - Vector2New(0, 36) })
+                            end)
+                        
+                            local function SlideHue(input)
+                                local SizeY = 1 - math.clamp((input.Position.Y - HueBackground.AbsolutePosition.Y) / HueBackground.AbsoluteSize.Y, 0, 1)
+                                local PosY = math.clamp(((input.Position.Y - HueBackground.AbsolutePosition.Y) / HueBackground.AbsoluteSize.Y) * HueBackground.AbsoluteSize.Y, 0, HueBackground.AbsoluteSize.Y - 2)
+                            
+                                HuePicker.Position = UDim2New(0, -2, 0, PosY - 2)
+                                Colorpicker.HuePosition = SizeY
+                        
+                                ColorpickerOptions:Set(Color3.fromHSV(SizeY, Sat, Val), Colorpicker.TransparencyValue, true)
+                            end
+                        
+                            TextButton.MouseButton1Down:Connect(function (input)
+                                Colorpicker.SlidingHue = true
+                        
+                                SlideHue({ Position = game.UserInputService:GetMouseLocation() - Vector2New(0, 36) })
+                            end)
+                        
+                            local function SlideTrans(input)
+                                local SizeX = 1 - math.clamp((input.Position.X - TransparencyBackground.AbsolutePosition.X) / TransparencyBackground.AbsoluteSize.X, 0, 1)
+                                local PosX = math.clamp(((input.Position.X - TransparencyBackground.AbsolutePosition.X) / TransparencyBackground.AbsoluteSize.X) * TransparencyBackground.AbsoluteSize.X, 0, TransparencyBackground.AbsoluteSize.X - 3)
+                        
+                                TransparencyPicker.Position = UDim2New(0, PosX, 0, -2)
+                        
+                                ColorpickerOptions:Set(Color3.fromHSV(Colorpicker.HuePosition, Sat, Val), SizeX, true)
+                            end
+                        
+                            TransparencyButton.MouseButton1Down:Connect(function (input)
+                                Colorpicker.SlidingAlpha = true
+                        
+                                SlideTrans({ Position = game.UserInputService:GetMouseLocation() - Vector2New(0, 36) })
+                            end)
+                        
+                            inputService.InputEnded:Connect(function (input)
+                                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                    Colorpicker.SlidingSat, Colorpicker.SlidingHue, Colorpicker.SlidingAlpha = false, false, false
+                                end
+                            end)
+                        
+                            inputService.InputChanged:Connect(function (input)
+                                if input.UserInputType == Enum.UserInputType.MouseMovement then
+                                    if Colorpicker.SlidingSat then
+                                        SlideSaturation(input)
+                                    elseif Colorpicker.SlidingHue then
+                                        SlideHue(input)
+                                    elseif Colorpicker.SlidingAlpha then
+                                        SlideTrans(input)
+                                    end
+                                end
+                            end)
+                        
+                            ColorpickerButton.MouseButton1Click:Connect(function ()
+                                if UserInterface.Popup and UserInterface.Popup.ID ~= ColorpickerHolder.Name then
+                                    UserInterface:RemovePopups()
+                                end
+                                if ColorpickerInline.Visible then
+                                    contentAnimations:Close()
+                                else
+                                    UserInterface:NewPopup({ Remove = contentAnimations.Close, ID = ColorpickerHolder.Name })
+                                    contentAnimations:Open()
+                                end
+                            end)
+                        
+                            increaseYSize(13)
+                        
+                            UserInterface.ConfigFlags[ColorpickerOptions.Flag] = function(value) ColorpickerOptions:Set(value) end
+                        
+                            return ColorpickerOptions
+                        end
+                    end
+                    do -- src/Lua/Interface/Components/Dropdowns.lua
+                        function Options:Dropdown(Configuration)
+                            local DropdownOptions = {
+                                Title = Configuration.title or "",
+                                Content = Configuration.values or {},
+                                Default = Configuration.default or "-",
+                                Multi = Configuration.multi or false,
+                                Callback = Configuration.callback or function () end,
+                                Flag = UserInterface:GetNextFlag()
+                            }
+                        
+                            local Dropdown = {
+                                FValues = {},
+                                FValue = DropdownOptions.Multi and {} or "",
+                            }
+                        
+                            local DropdownHolder = InstanceNew("Frame")
+                            local DropdownTitle = InstanceNew("TextLabel")
+                        
+                            DropdownHolder.Name = tostring(math.random(100, 16030))
+                            DropdownHolder.Parent = SectionColumnComponents
+                            DropdownHolder.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownHolder.BackgroundTransparency = 1.000
+                            DropdownHolder.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            DropdownHolder.BorderSizePixel = 0
+                            DropdownHolder.Size = UDim2New(0, 229, 0, 40)
+                            
+                            DropdownTitle.Name = "DropdownTitle"
+                            DropdownTitle.Parent = DropdownHolder
+                            DropdownTitle.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownTitle.BackgroundTransparency = 1.000
+                            DropdownTitle.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            DropdownTitle.BorderSizePixel = 0
+                            DropdownTitle.Size = UDim2New(0, 164, 0, 13)
+                            DropdownTitle.Font = Enum.Font.SourceSans
+                            DropdownTitle.Text = DropdownOptions.Title
+                            DropdownTitle.TextColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownTitle.TextSize = 14.000
+                            DropdownTitle.TextXAlignment = Enum.TextXAlignment.Left
+                        
+                            local xcxcxcxcxc = InstanceNew("UIListLayout", DropdownHolder)
+                            xcxcxcxcxc["Padding"] = UDim.new(0, 5)
+                            xcxcxcxcxc["SortOrder"] = Enum.SortOrder.LayoutOrder
+                            xcxcxcxcxc["Name"] = [[ColumnListLayout]]
+                            
+                            local OpenButton = InstanceNew("TextButton")
+                        	local OpenButtonCorner = InstanceNew("UICorner")
+                        	local OpenButtonStroke = InstanceNew("UIStroke")
+                        	local DropdownImage = InstanceNew("ImageLabel")
+                        	local DropdownText = InstanceNew("TextLabel")
+                        
+                            OpenButton.Name = "OpenButton"
+                            OpenButton.Parent = DropdownHolder
+                            OpenButton.ZIndex = 2
+                            OpenButton.Size = UDim2New(0, 230, 0, 22)
+                            OpenButton.BorderColor3 = Color3FromRGB(34, 34, 34)
+                            OpenButton.Position = UDim2New(0, 0, 0.576923072, 0)
+                            OpenButton.BackgroundColor3 = Color3FromRGB(21, 21, 21)
+                            OpenButton.AutoButtonColor = false
+                            OpenButton.TextColor3 = Color3FromRGB(255, 255, 255)
+                            OpenButton.Text = ""
+                            OpenButton.TextXAlignment = Enum.TextXAlignment.Left
+                            OpenButton.TextSize = 14
+                            OpenButton.TextTruncate = Enum.TextTruncate.AtEnd
+                            OpenButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            
+                            OpenButtonCorner.Name = "OpenButtonCorner"
+                            OpenButtonCorner.Parent = OpenButton
+                            OpenButtonCorner.CornerRadius = UDim.new(0, 3)
+                            
+                            OpenButtonStroke.Name = "OpenButtonStroke"
+                            OpenButtonStroke.Parent = OpenButton
+                            OpenButtonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                            OpenButtonStroke.Color = Color3FromRGB(15, 15, 15)
+                            
+                            DropdownImage.Name = "DropdownImage"
+                            DropdownImage.Parent = OpenButton
+                            DropdownImage.ZIndex = 3
+                            DropdownImage.Size = UDim2New(0, 9, 0, 6)
+                            DropdownImage.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            DropdownImage.BackgroundTransparency = 1
+                            DropdownImage.Position = UDim2New(0.939999938, 0, 0.342727214, 0)
+                            DropdownImage.BorderSizePixel = 0
+                            DropdownImage.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownImage.Image = "rbxassetid://17830630301"
+                            
+                            DropdownText.Name = "DropdownText"
+                            DropdownText.Parent = OpenButton
+                            DropdownText.ZIndex = 3
+                            DropdownText.Size = UDim2New(0, 204, 0, 22)
+                            DropdownText.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            DropdownText.BackgroundTransparency = 1
+                            DropdownText.Position = UDim2New(0.0130434781, 0, 0, 0)
+                            DropdownText.BorderSizePixel = 0
+                            DropdownText.BackgroundColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownText.TextColor3 = Color3FromRGB(255, 255, 255)
+                            DropdownText.Text = DropdownOptions.Default
+                            DropdownText.TextXAlignment = Enum.TextXAlignment.Left
+                            DropdownText.TextSize = 14
+                            DropdownText.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                            DropdownText.TextTruncate = "AtEnd"
+                        
+                            local Inline = InstanceNew("Frame")
+                            local InlineCorner = InstanceNew("UICorner")
+                            local InlineStroke = InstanceNew("UIStroke")
+                            local InlineList = InstanceNew("UIListLayout")
+                        
+                            Inline.Name = "Inline"
+                            Inline.Parent = OpenButton
+                            Inline.Size = UDim2New(0, 229, 0, 0)
+                            Inline.BorderColor3 = Color3FromRGB(0, 0, 0)
+                            Inline.Position = UDim2New(0, 0, 1, 0)
+                            Inline.BorderSizePixel = 0
+                            Inline.BackgroundColor3 = Color3FromRGB(15, 15, 15)
+                            Inline.Visible = false
+                            Inline.ZIndex = 3
+                            
+                            InlineCorner.Name = "InlineCorner"
+                            InlineCorner.Parent = Inline
+                            InlineCorner.CornerRadius = UDim.new(0, 3)
+                            
+                            InlineStroke.Name = "InlineStroke"
+                            InlineStroke.Parent = Inline
+                            InlineStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                            InlineStroke.Color = Color3FromRGB(37, 37, 37)
+                            
+                            InlineList.Name = "InlineList"
+                            InlineList.Parent = Inline
+                        
+                            local contentAnimations = {
+                                Open = function ( self )
+                                    Inline.Visible = true
+                        
+                                    local ImageRotation = tweenService:Create(DropdownImage, TweenInfo.new(0.15), { Rotation = 180 })
+                                    ImageRotation:Play()
+                        
+                                    local ContentTween = tweenService:Create(Inline, TweenInfo.new(0.15), { BackgroundTransparency = 0 })
+                                    ContentTween:Play()
+                                    self:FadeIn()
+                                end,
+                                FadeIn = function ()
+                                    for _, object in pairs( Inline:GetDescendants() ) do
+                                        if object:IsA("Frame") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { BackgroundTransparency = 0 }):Play()
+                                        elseif object:IsA("TextButton") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { TextTransparency = 0 }):Play()
+                                        elseif object:IsA("UIStroke") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { Transparency = 0 }):Play()
+                                        elseif object:IsA("TextLabel") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { TextTransparency = 0 }):Play()
+                                        end
+                                    end
+                                end,
+                                FadeOut = function ()
+                                    for _, object in pairs( Inline:GetDescendants() ) do
+                                        if object:IsA("Frame") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { BackgroundTransparency = 1 }):Play()
+                                        elseif object:IsA("TextButton") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { TextTransparency = 1 }):Play()
+                                        elseif object:IsA("TextLabel") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { TextTransparency = 1 }):Play()
+                                        elseif object:IsA("UIStroke") then
+                                            tweenService:Create(object, TweenInfo.new(0.15), { Transparency = 1 }):Play()
+                                        end
+                                    end
+                                end
+                            }
+                            
+                            function contentAnimations:Close()
+                                local ContentTween = tweenService:Create(Inline, TweenInfo.new(0.15), { BackgroundTransparency = 1 })
+                                ContentTween:Play()
+                        
+                                local ImageRotation = tweenService:Create(DropdownImage, TweenInfo.new(0.15), { Rotation = 0 })
+                                ImageRotation:Play()
+                        
+                                contentAnimations:FadeOut()
+                        
+                                TaskWait(0.15)
+                        
+                                Inline.Visible = false
+                            end
+                        
+                            local Count = 0
+                        
+                            function Dropdown:CreateValue(name)
+                                if not Dropdown.FValues[name] then
+                                    local Objects = {}
+                        
+                                    local DropdownButton = InstanceNew("TextButton")
+                                    local DBStroke = InstanceNew("UIStroke")
+                                    local DBCorner = InstanceNew("UICorner")
+                                    local DBName = InstanceNew("TextLabel")
+                        
+                                    DropdownButton.Name = "DropdownButton"
+                                    DropdownButton.Parent = Inline
+                                    DropdownButton.Size = UDim2.new(1, 0, 0, 14)
+                                    DropdownButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+                                    DropdownButton.BackgroundTransparency = 1
+                                    DropdownButton.Position = UDim2.new(0.0131004369, 0, 0, 0)
+                                    DropdownButton.BorderSizePixel = 0
+                                    DropdownButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                                    DropdownButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                    DropdownButton.Text = ""
+                                    DropdownButton.TextXAlignment = Enum.TextXAlignment.Left
+                                    DropdownButton.TextSize = 14
+                                    DropdownButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                                    DropdownButton.TextTransparency = 1
+                                    DropdownButton.ZIndex = 4
+                        
+                                    DBStroke.Name = "DBStroke"
+                                    DBStroke.Parent = DropdownButton
+                                    DBStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+                                    DBStroke.Color = Color3.fromRGB(24, 24, 24)
+                                    
+                                    DBCorner.Name = "DBCorner"
+                                    DBCorner.Parent = DropdownButton
+                                    DBCorner.CornerRadius = UDim.new(0, 3)
+                                    
+                                    DBName.Name = "DBName"
+                                    DBName.Parent = DropdownButton
+                                    DBName.Size = UDim2.new(0, 226, 1, 0)
+                                    DBName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+                                    DBName.BackgroundTransparency = 1
+                                    DBName.Position = UDim2.new(0.0131004369, 0, 0, 0)
+                                    DBName.BorderSizePixel = 0
+                                    DBName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                                    DBName.TextColor3 = Color3.fromRGB(129, 129, 127)
+                                    DBName.TextXAlignment = Enum.TextXAlignment.Left
+                                    DBName.TextSize = 14
+                                    DBName.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+                                    DBName.Text = name
+                                    DBName.ZIndex = 4
+                        Fate Is An Upcoming Da Hood Script
+35% DONE.
